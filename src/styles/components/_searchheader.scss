@@ -1,0 +1,29 @@
+.header-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header,
+input {
+	font-weight: 300;
+}
+
+.header{
+	margin: $marg 0 3.5rem $marg;	
+}
+
+form{
+	margin: $marg $marg 3.5rem 0;
+
+	button{
+		background: $darkGrey;
+		border: none;
+		color: #DDDDDD;
+		padding: 5px 12px;
+	}
+
+	input{
+		margin-left: -2px;
+		padding: 5px 12px;
+	}
+}

@@ -1,0 +1,24 @@
+.filters-wrapper {
+	display: flex;
+}
+
+.openCloseWrapper{
+	margin-right: $marg;	
+	margin-left: $marg;
+}
+
+.btn {
+	border: 1px solid $grey;
+	background: none;
+	padding: 5px 12px;
+
+}
+.btnActive {
+	background: $action;
+}
+
+select{
+	border: 1px solid $grey;
+	padding: 5px 12px;
+	
+}

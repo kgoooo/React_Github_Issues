@@ -1,0 +1,1 @@
+A basic issue finder for Github.  Functionality to sort by open or closed issues.  Can add labels and search by certain popular languages.
