@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Issue = () => (
+const Issue = (props) => (
 	<div className="issue-wrapper">
 		<div>
-			<h4>Issue description goes here</h4>
+			<h4>Title</h4>
 		</div>
 		<div className="issue-details-wrapper">
 			<div className="issue-details">

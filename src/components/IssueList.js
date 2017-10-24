@@ -1,11 +1,10 @@
 import React from 'react';
 import Issue from './Issue';
 
-const IssueList = () => (
+const IssueList = (props) => (
 	<div>
-		<Issue />
-		<Issue />
-		<Issue />
+		<Issue data={props}/>
+		{props.items}
 	</div>
 )
 

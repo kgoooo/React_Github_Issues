@@ -1,7 +1,8 @@
 import React from 'react';
-import FiltersBar from './FiltersBar'
-import IssueList from './IssueList'
-import SearchHeader from './SearchHeader'
+import FiltersBar from './FiltersBar';
+import IssueList from './IssueList';
+import SearchHeader from './SearchHeader';
+import GithubAPI from '../api/GithubAPI';
 
 class GithubIssueFinderApp extends React.Component{
 	constructor(props){
@@ -10,8 +11,16 @@ class GithubIssueFinderApp extends React.Component{
 		this.state = {
 			language: 'javascript',
 			issueState: 'open',
-			label: ''
+			label: '',
+			data: undefined
 		}
+	}
+	handleSearch = () => {
+		GithubAPI.getIssues(this.state.issueState, this.state.language).then((data) =>{
+			this.setState(()=> ({ data }))
+			console.log(data.items[0].title);	
+			console.log(this.state.data);		
+		})
 	}
 	handleSubmitLabel = (label) => {
 		this.setState(() => ({
@@ -43,8 +52,9 @@ class GithubIssueFinderApp extends React.Component{
 				<FiltersBar 
 					onLanguageChange={this.handleLanguageChange}
 					onIssueStateChange={this.handleIssueStateChange}
+					onSearch={this.handleSearch}
 				/>
-				<IssueList />
+				<IssueList data={this.state.data}/>
 			</div>
 		)
 	}

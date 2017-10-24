@@ -48,6 +48,7 @@ const FiltersBar = (props) => (
 					<option value="python">Python</option>
 					<option value="java">Java</option>
 				</select>
+				<button onClick={props.onSearch}>Search</button>
 			</div>
 		</div>
 )
