@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 
-
 const Issue = (props) => {
 	const now = moment(Date.now());
 	const created = moment(Date.parse(props.createdAt));
@@ -22,15 +21,15 @@ const Issue = (props) => {
 				</div>
 			</div>
 			<div>
-				{props.labelsNumber !== 1 ? <p className="labels">{props.labelsNumber} Labels</p> :
-					<p className="labels">{props.labelsNumber} Label</p>}
+				{props.labelsNumber !== 1 ? <p className="labels">{props.labelsNumber} Labels</p> : <p className="labels">{props.labelsNumber} Label</p>}
 				<div className="label-color-div">
 					{props.labelsArray.length > 0 ? props.labelsArray.map((label, i) =>
 						<p
 							key={props.labelsArray[i].id}
 							className="label-color"
 							style={{background: '#' + props.labelsArray[i].color}}
-						>{props.labelsArray[i].name}</p>) : null}
+						>
+						{props.labelsArray[i].name}</p>) : null}
 				</div>
 			</div>
 		</div>

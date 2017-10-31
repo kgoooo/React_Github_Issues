@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 module.exports = {
 	getIssues: (issueState, language, label) => {
 		// const encodedSearch = encodeURIComponent(filterTerm);

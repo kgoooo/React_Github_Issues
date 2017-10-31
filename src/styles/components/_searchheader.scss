@@ -16,15 +16,16 @@ input {
 form{
 	margin: $marg $marg 3.5rem 0;
 
-	button{
-		background: $darkGrey;
-		border: none;
-		color: #DDDDDD;
-		padding: 5px 12px;
-	}
+	button{ @include btnTransition }
 
 	input{
 		margin-left: -2px;
 		padding: 5px 12px;
+		border: 1px solid $grey;
+		outline: none;
 	}
+}
+button:hover{
+	@include btnTransition;
+	background: darken($action, 10%)
 }

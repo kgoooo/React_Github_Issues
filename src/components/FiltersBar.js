@@ -1,5 +1,4 @@
 import React from 'react';
-import GithubIssueFinderApp from './GithubIssueFinderApp';
 
 const FiltersBar = (props) => (
 	<div className="filters-wrapper">
@@ -32,6 +31,5 @@ const FiltersBar = (props) => (
 			</div>
 		</div>
 )
-
 
 export default FiltersBar;
