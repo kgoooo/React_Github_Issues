@@ -1,24 +1,54 @@
 .filters-wrapper {
 	display: flex;
+	margin-bottom: $marg;
+	margin-left: calc(10% - 12px);
+
+	.open {
+		border-right: none;
+	}
+	.closed{
+		border-left: none;		
+	}
+	.search{
+		margin-left: $marg;
+		@include btnTransition
+	}
+	.language {
+		width: 100px;
+		border-right: 0px;
+		margin-right: -1px;
+	}
+	select {
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+		border-radius: 0px;
+		border-left: 0px;
+		@include btnTransition;
+		background: $action;
+		cursor: pointer;
+	}
+}
+.search:hover,
+.search:active,
+.select:hover,
+.select:active {
+	background: darken($action, 10%);
+	@include btnTransition
 }
 
 .openCloseWrapper{
 	margin-right: $marg;	
-	margin-left: $marg;
+	//margin-left: $marg;
 }
 
 .btn {
 	border: 1px solid $grey;
 	background: none;
 	padding: 5px 12px;
-
+	outline: none;
 }
 .btnActive {
 	background: $action;
 }
 
-select{
-	border: 1px solid $grey;
-	padding: 5px 12px;
-	
-}

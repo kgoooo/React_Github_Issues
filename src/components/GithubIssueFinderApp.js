@@ -16,33 +16,32 @@ class GithubIssueFinderApp extends React.Component{
 		}
 	}
 	handleSearch = () => {
-		GithubAPI.getIssues(this.state.issueState, this.state.language).then((data) =>{
+		GithubAPI.getIssues(this.state.issueState, this.state.language, this.state.label).then((data) =>{
 			this.setState(()=> ({ data }))
 			console.log(data.items[0].title);	
 			console.log(this.state.data);		
 		})
-	}
+	};
 	handleSubmitLabel = (label) => {
 		this.setState(() => ({
 			label
-		}))
+		}));
 		console.log(this.state);
-	}
+	};
 	handleLanguageChange = (e) => {
 		const language = e.target.value;
 		this.setState(() => ({
 			language
-		}))
+		}));
 		console.log(this.state)
-	}
-	//THIS is not finisheed yet necissarilly
+	};
 	handleIssueStateChange = (e) => {
 		const issueState = e.target.value;
 		this.setState(() => ({
 			issueState
-		}))
+		}));
 		console.log(this.state);		
-	}
+	};
 	render(){
 		return(
 			<div>
@@ -53,6 +52,7 @@ class GithubIssueFinderApp extends React.Component{
 					onLanguageChange={this.handleLanguageChange}
 					onIssueStateChange={this.handleIssueStateChange}
 					onSearch={this.handleSearch}
+					issueState={this.state.issueState}
 				/>
 				<IssueList data={this.state.data}/>
 			</div>

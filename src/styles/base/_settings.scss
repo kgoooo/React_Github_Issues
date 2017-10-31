@@ -1,7 +1,13 @@
+@mixin btnTransition {
+	transition: background ease-in-out 320ms;
+}
+
 //  ###### COLORS ######
+$text: #333;
 $grey: #979797;
 $action: #CEF3E9;
 $darkGrey: #5A5A5A;
+$issueBgGrey: #f8f8f8;
 
 
 // ##### SPACING ######

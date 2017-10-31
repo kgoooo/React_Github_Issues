@@ -1,6 +1,7 @@
 .header-container {
 	display: flex;
 	justify-content: space-between;
+	margin-left: calc(10% - 12px);
 }
 
 .header,
@@ -9,7 +10,7 @@ input {
 }
 
 .header{
-	margin: $marg 0 3.5rem $marg;	
+	margin: $marg 0 3.5rem 0;
 }
 
 form{
